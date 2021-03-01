@@ -69,7 +69,7 @@ DL* AddTail(DL *L,int value)
 DL* AddAt(DL *L,int value,int pos)
 {
 	if (pos == 0) return AddHead(L,value);
-	else if (pos == LengthList(L)) return AddTail(L,value);
+	else if (pos == LengthList(L)-1) return AddTail(L,value);
 	else
 	{
 		node* p = L->head;
@@ -108,7 +108,7 @@ DL* DeleteTail(DL* L)
 DL* DeleteAt(DL* L,int pos)
 {
     if (pos == 0) return DeleteHead(L);
-    else if (pos == LengthList(L)) return DeleteTail(L);
+    else if (pos == LengthList(L)-1) return DeleteTail(L);
     else
     {
         node* p = L->head;
